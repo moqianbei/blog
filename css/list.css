@@ -7,8 +7,7 @@
 }
 
 html {
-    background: #F3F8FD;
-    width:720px;
+    background: transparent;
 }
 
 body {
@@ -27,8 +26,8 @@ div.list {
     padding-top: 30px;
 }
 
-.list h2{
-	text-align: center;
+.list h2 {
+    text-align: center;
 }
 
 h2.title {
@@ -36,24 +35,82 @@ h2.title {
     font-size: 20px;
 }
 
+
+hr {
+    border-top: 1px dotted red;
+    height: 1px;
+}
+
 img.cover {
     max-width: 100%;
 }
 
-
-
-time {
-    /*这里加一个日历的图标*/
-    padding-left: 10px;
+address {
+    height: 20px;
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px 0 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+        0px 0px 20px rgba(0, 0, 0, 0.1) inset;
+    background: #fff;
+    font-size: 15px;
+    font-style: normal;
 }
 
+
+
+address::before,
+address::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(-3deg);
+}
+
+address::after {
+    right: 10px;
+    left: auto;
+    transform: rotate(3deg);
+}
+
+
+address * {
+    font-size: 15px;
+    font-style: normal;
+}
+
+
 div.summary {
-    margin-left: 50px;
+    margin: 20px 10px;
+}
+
+.summary p {
+    line-height: 22px;
+    font-size: 12px;
+    width: 100%;
+    text-align: justify;
+}
+
+.summary p::first-letter {
+    font-size: 4em;
+    font-weight: bold;
+    margin-right: 8px;
+    float: left;
+    color: blue;
 }
 
 .summary li {
     padding: 2px 0;
 }
+
+
 
 .all {
     margin: 10px 0 10px 20px;
